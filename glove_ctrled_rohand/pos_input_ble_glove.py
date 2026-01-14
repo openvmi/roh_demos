@@ -67,8 +67,7 @@ class PosInputBleGlove:
         await self._gforce_device.set_subscription(gforce.DataSubscription.EMG_RAW)
         self._q = await self._gforce_device.start_streaming()
 
-        print("校正模式，请常速握拳和张开及旋转大拇指动作若干次\n" \
-        "Calibration Mode. Please perform several cycles of making a fist at normal speed, opening the hand, and rotating the thumb.")
+        print("校正模式，请握拳和张开若干次\nCalibrating mode, please perform a fist and open action several times")
 
         for _ in range(256):
             v = await self._q.get()

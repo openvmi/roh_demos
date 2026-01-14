@@ -221,8 +221,7 @@ class PosInputUsbGlove:
         else:
             print("使用通用手套\nUse general glove")
 
-        print("校正模式，请常速握拳和张开及旋转大拇指动作若干次\n" \
-        "Calibration Mode. Please perform several cycles of making a fist at normal speed, opening the hand, and rotating the thumb.")
+        print("校正模式，请握拳和张开若干次\nCalibrating mode, please perform a fist and open action several times")
 
         for _ in range(512):
             self.get_data(self._glove_raw_data)
